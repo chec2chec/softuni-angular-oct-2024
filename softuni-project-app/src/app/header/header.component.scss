@@ -1,0 +1,9 @@
+.menu {
+    display: flex;
+    border: solid 1px gray;
+    align-items: center;
+
+    .menu-item {
+        padding: 5px 10px;
+    }
+}
