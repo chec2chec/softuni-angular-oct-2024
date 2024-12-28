@@ -3,10 +3,22 @@
 ## How to
 
 - Install MongoDb
-- Use mongorestore to import resources/forum folder 
+- Use mongorestore to import /c/data/db from resources/forum 
 
-mongorestore -d forum path-to-folder\resources\forum
+### For Windows
+mongorestore -d forum C:\data\db
 
-- Start the db server
-- Install Rest-api node project and start it with npm run start
-- Install softuni-project-app with npm install and start it with ng serve
+## Start the db server
+You can use ./start-mongo.sh script
+
+
+## Install Rest-api node project and start it
+Use command npm run start
+or
+You can use ./start-rest-api.sh
+
+## Install softuni-project-app
+Run npm install in the folder
+
+## Start it
+Run ng serve in the folder
