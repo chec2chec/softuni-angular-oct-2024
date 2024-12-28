@@ -1,0 +1,55 @@
+@if(isLoggedIn){
+  <h2>Login successfull</h2>
+} @else {
+  <form class="login" #form="ngForm" (ngSubmit)="login(form)">
+    <fieldset>
+      <h2>Login Form</h2>
+
+      <p class="field field-icon">
+        <label for="email"
+          ><span><i class="fas fa-envelope"></i></span
+        ></label>
+        <!-- class="input-error" -->
+        <input
+          [class]=""
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your email"
+          ngModel
+          #inputEmail="ngModel"
+          required
+        />
+      </p>
+
+      <p class="field field-icon">
+        <label for="password"
+          ><span><i class="fas fa-lock"></i></span
+        ></label>
+        <input
+          [class]=""
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Your password"
+          ngModel
+          #inputPassword="ngModel"
+          minlength="5"
+          required
+        />
+      </p>
+
+      <button
+        [disabled]="form.invalid"
+        [style]="{ backgroundColor: form.invalid ? 'grey' : '#234465' }"
+      >
+        Login
+      </button>
+
+      <p class="text-center">
+        Have an account?
+        <a routerLink="/register">Register</a>
+      </p>
+    </fieldset>
+  </form>
+}
